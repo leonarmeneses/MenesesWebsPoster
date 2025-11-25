@@ -1,0 +1,20 @@
+{
+  "name": "meneses-webs-fb-poster",
+  "version": "1.0.0",
+  "description": "Automated Facebook posting for Meneses Webs with AI-powered content generation",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0",
+    "express": "^5.1.0",
+    "form-data": "^4.0.5",
+    "googleapis": "^166.0.0",
+    "node-cron": "^3.0.0"
+  }
+}
