@@ -21,32 +21,42 @@ export async function generatePostContent(imageBuffer = null, mimeType = null) {
     }
 
     const prompt = `
-      Actúa como el Community Manager experto de "Meneses Webs", una agencia líder en desarrollo web y soluciones digitales en Playa del Carmen con +8 años de experiencia y 27 proyectos exitosos.
+      Actúa como un Estratega de Marketing Digital y Copywriter Senior para "Meneses Webs", una agencia de desarrollo web de alto nivel en Playa del Carmen.
       
-      ${imagePart ? "ANALIZA LA IMAGEN PROPORCIONADA. Es un proyecto web, diseño, captura de pantalla de sistema, o concepto digital." : ""}
-      
-      Genera una publicación para Facebook atractiva, profesional y corta (máximo 3 oraciones) ${imagePart ? "basada en lo que ves en la imagen" : "sobre nuestros servicios digitales"}.
-      
-      Temas posibles (si no hay imagen o para complementar):
-      - Desarrollo de páginas web profesionales y optimizadas para SEO.
-      - Tiendas virtuales (e-commerce) con WooCommerce y plataformas avanzadas.
-      - Sistemas empresariales personalizados (CRM, ERP, APIs).
-      - Aplicaciones móviles nativas e híbridas.
-      - Marketing digital, SEO y posicionamiento.
-      - Tips sobre transformación digital para negocios.
-      - Casos de éxito y testimonios.
+      TU OBJETIVO: Generar interacción (likes, comentarios) y ventas (mensajes, visitas). No solo "informar", sino "persuadir".
 
-      Datos obligatorios a incluir sutilmente o al final:
-      - Ubicación: Playa del Carmen, Quintana Roo
-      - WhatsApp: +52 1 984 187 0951
-      - Email: Meneseswebs@gmail.com (opcional)
+      ${imagePart ? "PASO 1: ANALIZA LA IMAGEN VISUALMENTE. ¿Qué transmite? (Innovación, velocidad, diseño elegante, complejidad técnica, éxito)." : ""}
       
-      Estilo:
-      - Usa emojis tecnológicos 💻🚀📱🌐✨.
-      - Tono: Profesional, innovador, cercano y orientado a resultados.
-      - Hashtags: #MenesesWebs #DesarrolloWeb #PlayaDelCarmen #TransformaciónDigital #PáginasWeb #Ecommerce #AppsMoviles
+      PASO 2: Escribe un post para Facebook usando UNA de las siguientes 3 estrategias (elige la que mejor encaje con la imagen o alterna si no hay imagen):
+
+      ESTRATEGIA A: PROBLEMA / SOLUCIÓN (Dolor -> Alivio)
+      - Gancho: Una pregunta que toque un punto de dolor (ej. "¿Tu web no vende?", "¿Clientes perdidos?").
+      - Cuerpo: Cómo Meneses Webs soluciona eso con tecnología de punta.
+      - Cierre: Invitación a resolverlo YA.
+
+      ESTRATEGIA B: AUTORIDAD / EDUCATIVO (Sabías que...)
+      - Gancho: Un dato curioso o técnico interesante sobre webs/apps.
+      - Cuerpo: Por qué es vital para un negocio moderno tener esto bien hecho.
+      - Cierre: "Déjanos asesorarte".
+
+      ESTRATEGIA C: ASPIRACIONAL / ÉXITO (Transformación)
+      - Gancho: "Imagina tu negocio funcionando en automático 24/7".
+      - Cuerpo: Los beneficios de tener un sistema o e-commerce profesional (más tiempo libre, más ventas).
+      - Cierre: "Hazlo realidad hoy".
+
+      REGLAS DE REDACCIÓN (AIDA):
+      1. ATENCIÓN: La primera frase debe ser un "freno de mano" (scroll-stopper). Usa emojis.
+      2. INTERÉS/DESEO: Habla de BENEFICIOS (dinero, tiempo, prestigio), no solo de características técnicas.
+      3. ACCIÓN: Un CTA (Llamado a la Acción) claro y directo al final.
+
+      Datos de contacto obligatorios (al final):
+      📍 Playa del Carmen
+      📲 WhatsApp: +52 1 984 187 0951
       
-      IMPORTANTE: Solo dame el texto de la publicación, nada más.
+      Hashtags: #MenesesWebs #PlayaDelCarmen #DesarrolloWeb #Ecommerce #NegociosDigitales #EmprendedoresRivieraMaya #MarketingDigital
+
+      Longitud: Máximo 4 párrafos cortos. Tono: Profesional pero enérgico y persuasivo.
+      IMPORTANTE: Solo dame el texto final del post.
     `;
 
     const parts = imagePart ? [prompt, imagePart] : [prompt];
