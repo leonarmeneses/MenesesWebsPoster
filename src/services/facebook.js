@@ -61,6 +61,13 @@ export async function postToFacebook(message, imageData) {
         }
     } catch (error) {
         console.error("❌ Error posting to Facebook:", error.response ? error.response.data : error.message);
+
+        // Check for Token Expiration (Code 190)
+        if (error.response && error.response.data && error.response.data.error && error.response.data.error.code === 190) {
+            console.error("\n🚨🚨🚨 CRITICAL ALERT: FACEBOOK ACCESS TOKEN EXPIRED! 🚨🚨🚨");
+            console.error("Please generate a new token at developers.facebook.com and update your .env file immediately.\n");
+        }
+
         return false;
     }
 }

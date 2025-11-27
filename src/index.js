@@ -57,7 +57,7 @@ async function runPostCycle() {
 
 // --- SCHEDULER ---
 // Schedule task to run every hour
-cron.schedule('0 * * * *', async () => {
+cron.schedule('0 9,14,19 * * *', async () => {
     console.log("⏰ Cron job triggered.");
     await runPostCycle();
 });
