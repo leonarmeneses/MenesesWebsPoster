@@ -32,7 +32,7 @@ async function runManualTest() {
 
         // 3. Post to Facebook
         console.log("bie Posting to Facebook...");
-        const success = await postToFacebook(content, image ? image.buffer : null);
+        const success = await postToFacebook(content, image);
 
         if (success) {
             console.log("✅ Test completed successfully! Check your Facebook Page.");
